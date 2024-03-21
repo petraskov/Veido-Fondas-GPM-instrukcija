@@ -33,7 +33,7 @@ document.getElementById('did-it-button').addEventListener('click', function() {
             body: JSON.stringify({
                 message: 'Increment counter',
                 content: btoa(JSON.stringify(updatedData)), // Convert JSON to base64
-                sha: 'sha-of-the-counter-json-file', // Replace with the actual SHA of the counter.json file
+                sha: 'a8850a831e36772540e17a3111b16d00d88dbb7a', // Replace with the actual SHA of the counter.json file
             }),
         }).then(response => {
             console.log(response)
