@@ -21,7 +21,8 @@ p {
 
 .image-gallery img {
     margin: 20px !important; /* Add some margin around images */
-    width: 100%; /* Ensure images don't exceed container width */
+    width: 100%; 
+    height: auto;/* Ensure images don't exceed container width */
 }
 .instruction-step {
     margin-bottom: 20px; /* Add some space between instruction steps */
@@ -55,6 +56,7 @@ p {
 .instruction-step img {
     margin-right: 10px !important;
     max-width: 100%; 
+    height: auto;
 }
 .mr-10px {
     margin-left: 20px!important;
