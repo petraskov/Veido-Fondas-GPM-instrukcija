@@ -27,7 +27,7 @@ document.getElementById('did-it-button').addEventListener('click', function() {
         fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json', {
             method: 'PUT',
             headers: {
-                'Authorization': 'token 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',
+                'Authorization': 'token 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',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
