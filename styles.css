@@ -27,9 +27,10 @@ p {
 }
 .image-gallery-childa {
     margin: 10px !important; /* Add some margin around images */
-    width: 98% !important;
-    
-    
+    width: 98% !important;  
+}
+.small{
+    margin-left:10px;
 }
 .instruction-step {
     margin-bottom: 20px; /* Add some space between instruction steps */
