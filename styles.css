@@ -20,13 +20,13 @@ p {
 }
 
 .image-gallery-child {
-    margin: 10px !important; /* Add some margin around images */
+    margin: 0px !important; /* Add some margin around images */
     width: 100% !important;
    
     
 }
 .image-gallery-childa {
-    margin: 10px !important; /* Add some margin around images */
+    margin: 0px !important; /* Add some margin around images */
     width: 98% !important;  
 }
 .small{
