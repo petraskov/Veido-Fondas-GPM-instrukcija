@@ -78,6 +78,6 @@ p {
     overflow: hidden;
     font-weight: 700;
     border: 1px solid transparent; /* Reduce border thickness by 50% */
-    min-height: 21px; /* Reduce min-height by 50% */
+    min-height: 31px; /* Reduce min-height by 50% */
     border-radius: 2px; /* Reduce border-radius by 50% */
 }
