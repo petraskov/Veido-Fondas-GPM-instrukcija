@@ -49,6 +49,19 @@
         </div>
     </div>
     <script>
+        function updateCounterValue() {
+            fetch('counter.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('counter').textContent = data.counter;
+                })
+                .catch(error => {
+                    console.error('Error fetching counter value:', error);
+                });
+        }
+
+        // Update counter value on page load
+        updateCounterValue();
         document.getElementById('did-it-button').addEventListener('click', function() {
             if (!localStorage.getItem('didItClicked')) {
                 // Increment the counter value
