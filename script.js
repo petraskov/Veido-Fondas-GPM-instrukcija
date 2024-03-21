@@ -45,9 +45,9 @@ document.getElementById('did-it-button').addEventListener('click', function() {
         });
 
         // Store the updated counter value in localStorage
-        localStorage.setItem('didItClicked', true);
+        //localStorage.setItem('didItClicked', true);
 
         // Disable the button to prevent further clicks
-        this.disabled = true;
+        //this.disabled = true;
     }
 });
