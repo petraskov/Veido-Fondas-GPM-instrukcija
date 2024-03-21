@@ -49,50 +49,7 @@
         </div>
     </div>
     <script>
-        function updateCounterValue() {
-            fetch('counter.json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('counter').textContent = data.counter;
-                })
-                .catch(error => {
-                    console.error('Error fetching counter value:', error);
-                });
-        }
 
-        // Update counter value on page load
-        updateCounterValue();
-        document.getElementById('did-it-button').addEventListener('click', function() {
-            if (!localStorage.getItem('didItClicked')) {
-                // Increment the counter value
-                let counterElement = document.getElementById('counter');
-                let counterValue = parseInt(counterElement.textContent);
-                counterValue++;
-                counterElement.textContent = counterValue;
-
-                // Store the updated counter value in localStorage
-                localStorage.setItem('didItClicked', true);
-
-                // Disable the button to prevent further clicks
-                this.disabled = true;
-
-                // Send request to update the counter on GitHub
-                fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/dispatches', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': 'token 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' , //+ process.env.TOKEN_COUNTER
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ event_type: 'update-counter' }),
-                }).then(response => {
-                    if (!response.ok) {
-                        console.error('Failed to trigger workflow:', response.status, response.statusText);
-                    }
-                }).catch(error => {
-                    console.error('Error triggering workflow:', error);
-                });
-            }
-        });
     </script>
 </body>
 </html>
