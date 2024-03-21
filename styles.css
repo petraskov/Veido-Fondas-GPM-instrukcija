@@ -38,13 +38,13 @@ p {
 }
 
 .container {
-    max-width: 800px; /* Set maximum width for content */
+    max-width: 1000px; /* Set maximum width for content */
     margin: 0 auto; /* Center content horizontally */
     padding: 20px; /* Add some padding around content */
 }
 
 .instruction-step {
-    width: 70%; /* Set a fixed width for each step block */
+    width: 80%; /* Set a fixed width for each step block */
     margin: 0 auto; /* Center each step block horizontally */
     padding: 10px; /* Add some padding around each step block */
     background-color: rgb(238, 238, 238); /* Add a background color for better visibility */
