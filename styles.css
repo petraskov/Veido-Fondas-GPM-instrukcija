@@ -21,16 +21,14 @@ p {
 
 .image-gallery-child {
     margin: 10px !important; /* Add some margin around images */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: 100% !important;
+    height: auto !important;
     
 }
 .image-gallery-child1 {
     margin: 10px !important; /* Add some margin around images */
-    width: 98%;
-    height: auto;
-    object-fit: cover;
+    width: 98% !important;
+    height: auto !important;
     
 }
 .instruction-step {
