@@ -55,7 +55,7 @@ document.getElementById('did-it-button').addEventListener('click', function() {
       fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json', {
         method: 'PUT',
         headers: {
-          'Authorization': 'token YOUR_GITHUB_TOKEN',
+          'Authorization': 'token ' + process.env.TOKEN_COUNTER,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -71,11 +71,12 @@ document.getElementById('did-it-button').addEventListener('click', function() {
       });
     });
 });
+
 fetch('counter.json')
   .then(response => response.json())
   .then(data => {
     document.getElementById('counter').textContent = data.counter;
-  });  
+  });
     </script>
 </body>
 </html>
