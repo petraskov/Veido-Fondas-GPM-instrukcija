@@ -48,5 +48,53 @@
             <!-- Add more instruction steps and images as needed -->
         </div>
     </div>
+    <script>
+        if (localStorage.getItem('didItClicked')) {
+    // If it has been clicked, disable the button
+    document.getElementById('did-it-button').disabled = true;
+}
+
+document.getElementById('did-it-button').addEventListener('click', function() {
+    // Check if the button has been clicked before
+    if (!localStorage.getItem('didItClicked')) {
+        // If it hasn't been clicked, increment the counter and mark the button as clicked
+        fetch('counter.json')
+            .then(response => response.json())
+            .then(data => {
+                data.counter++;
+                fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json', {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': 'token ' + process.env.TOKEN_COUNTER,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Increment counter',
+                        content: btoa(JSON.stringify(data)),
+                        sha: data.sha
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Update the displayed counter value
+                    document.getElementById('counter').textContent = data.counter;
+                });
+            });
+
+        // Mark the button as clicked in local storage
+        localStorage.setItem('didItClicked', true);
+
+        // Disable the button to prevent further clicks
+        this.disabled = true;
+    }
+});
+
+// Fetch and display the counter value
+fetch('counter.json')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('counter').textContent = data.counter;
+    });
+    </script>
 </body>
 </html>
