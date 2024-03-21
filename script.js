@@ -36,6 +36,7 @@ document.getElementById('did-it-button').addEventListener('click', function() {
                 sha: 'sha-of-the-counter-json-file', // Replace with the actual SHA of the counter.json file
             }),
         }).then(response => {
+            console.log(response)
             if (!response.ok) {
                 console.error('Failed to update JSON:', response.status, response.statusText);
             }
