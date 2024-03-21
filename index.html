@@ -52,7 +52,7 @@ document.getElementById('did-it-button').addEventListener('click', function() {
     .then(response => response.json())
     .then(data => {
       data.counter++;
-      fetch('https://api.github.com/repos/yourusername/yourrepository/contents/counter.json', {
+      fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json', {
         method: 'PUT',
         headers: {
           'Authorization': 'token YOUR_GITHUB_TOKEN',
