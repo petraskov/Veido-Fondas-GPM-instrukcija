@@ -60,3 +60,23 @@ p {
     display: inline-flex; /* Ensure images are displayed as blocks for proper alignment */
     margin: 10px auto; /* Center images within each step block */
 }
+.mr-20px {
+    margin-right: 20px!important;
+}
+.btn.green-button {
+    color: rgb(255, 255, 255);
+    background-color rgb(3, 125, 64)
+    border-bottom-color rgb(3, 125, 64)
+}
+
+.btn {
+    min-width: 180px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 700;
+    border: 2px solid transparent;
+    margin-top: 10px;
+    min-height: 42px;
+    border-radius: 3px;
+}
