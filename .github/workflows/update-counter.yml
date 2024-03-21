@@ -16,10 +16,8 @@ jobs:
         run: |
           counter=$(curl -sSL https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json | jq -r '.counter')
           new_counter=$((counter + 1))
-          json_content="{\"counter\": $new_counter}"
-          content_base64=$(echo -n "$json_content" | base64)
           curl -X PUT \
             -H "Authorization: token ${{ secrets.TOKEN_COUNTER }}" \
             -H "Content-Type: application/json" \
-            -d "{\"message\": \"Increment counter\", \"content\": \"$content_base64\", \"sha\": \"$(curl -sSL https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json | jq -r '.sha')\"}" \
+            -d '{"message": "Increment counter", "content": "'"$(echo -n '{"counter":'$new_counter'}' | base64)"'", "sha": "'"$(curl -sSL https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json | jq -r '.sha')"'" }' \
             https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json
