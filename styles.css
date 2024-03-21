@@ -54,10 +54,7 @@ p {
     align-items: center; /* Center content vertically */
 }
 
-.instruction-step img {
-    margin-right: 10px !important;
-    max-width: 100%; 
-}
+
 .mr-10px {
     margin-left: 20px!important;
     
