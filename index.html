@@ -67,7 +67,7 @@
                 fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/dispatches', {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'token ' + process.env.TOKEN_COUNTER,
+                        'Authorization': 'token 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' , //+ process.env.TOKEN_COUNTER
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({ event_type: 'update-counter' }),
