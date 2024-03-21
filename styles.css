@@ -2,7 +2,7 @@ body {
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     font-family: Arial, sans-serif; /* Specify font family */
-    background-color: rgb(238, 238, 238); /* Set background color */
+    background-color: #f9f9f9; /* Set background color */
 }
 
 .container {
@@ -47,7 +47,7 @@ p {
     width: 70%; /* Set a fixed width for each step block */
     margin: 0 auto; /* Center each step block horizontally */
     padding: 10px; /* Add some padding around each step block */
-    background-color: #f9f9f9; /* Add a background color for better visibility */
+    background-color: rgb(238, 238, 238); /* Add a background color for better visibility */
     border-radius: 10px; /* Add rounded corners to each step block */
     margin-bottom: 20px; /* Add some space between each step block */
 }
@@ -57,6 +57,6 @@ p {
 }
 
 .instruction-step img {
-    display: block; /* Ensure images are displayed as blocks for proper alignment */
+    display: inline-flex; /* Ensure images are displayed as blocks for proper alignment */
     margin: 10px auto; /* Center images within each step block */
 }
