@@ -54,14 +54,16 @@ p {
 
 .instruction-step p {
     text-align: left; /* Align individual steps left */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
 }
 
 .instruction-step img {
-    display: inline-flex; /* Ensure images are displayed as blocks for proper alignment */
-    margin: 10px auto; /* Center images within each step block */
+    margin-right: 10px;
 }
 .mr-20px {
     margin-right: 20px!important;
+    
 }
 .btn.green-button {
     color: rgb(255, 255, 255);
