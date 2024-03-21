@@ -25,6 +25,12 @@ p {
     height: auto;
     
 }
+.image-gallery-child1 {
+    margin: 10px !important; /* Add some margin around images */
+    width: 98%;
+    height: auto;
+    
+}
 .instruction-step {
     margin-bottom: 20px; /* Add some space between instruction steps */
 }
