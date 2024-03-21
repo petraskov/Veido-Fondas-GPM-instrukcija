@@ -23,12 +23,14 @@ p {
     margin: 10px !important; /* Add some margin around images */
     width: 100%;
     height: auto;
+    object-fit: cover;
     
 }
 .image-gallery-child1 {
     margin: 10px !important; /* Add some margin around images */
     width: 98%;
     height: auto;
+    object-fit: cover;
     
 }
 .instruction-step {
