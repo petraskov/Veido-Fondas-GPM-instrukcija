@@ -19,7 +19,7 @@ p {
     justify-content: center; /* Center images horizontally */
 }
 
-.image-gallery-child img {
+.image-gallery-child {
     margin: 10px !important; /* Add some margin around images */
     width: 100%;
     height: auto;
