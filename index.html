@@ -48,37 +48,5 @@
             <!-- Add more instruction steps and images as needed -->
         </div>
     </div>
-    <script>
-document.getElementById('did-it-button').addEventListener('click', function() {
-  fetch('counter.json')
-    .then(response => response.json())
-    .then(data => {
-      data.counter++;
-      fetch('https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json', {
-        method: 'PUT',
-        headers: {
-          'Authorization': 'token ' + process.env.TOKEN_COUNTER,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: 'Increment counter',
-          content: btoa(JSON.stringify(data)),
-          sha: data.sha
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Update the displayed counter value
-        document.getElementById('counter').textContent = data.counter;
-      });
-    });
-});
-
-fetch('counter.json')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('counter').textContent = data.counter;
-  });
-    </script>
 </body>
 </html>
