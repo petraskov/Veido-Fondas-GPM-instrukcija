@@ -29,3 +29,10 @@ p {
     margin: 10px; /* Add some margin around images */
     max-width: 100%; /* Ensure images don't exceed container width */
 }
+.instruction-step {
+    margin-bottom: 20px; /* Add some space between instruction steps */
+}
+
+.instruction-step p {
+    font-weight: bold; /* Make instruction step text bold */
+}
