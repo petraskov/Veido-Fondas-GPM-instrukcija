@@ -20,9 +20,9 @@ p {
 }
 
 .image-gallery img {
-    margin: 20px !important; /* Add some margin around images */
+    margin: 10px !important; /* Add some margin around images */
     width: 100%; 
-    height: auto;/* Ensure images don't exceed container width */
+    
 }
 .instruction-step {
     margin-bottom: 20px; /* Add some space between instruction steps */
