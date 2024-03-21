@@ -1,0 +1,23 @@
+name: Update Counter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-counter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Increment counter
+        run: |
+          counter=$(curl -sSL https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json | jq -r '.counter')
+          new_counter=$((counter + 1))
+          curl -X PUT \
+            -H "Authorization: token ${{ secrets.TOKEN_COUNTER }}" \
+            -H "Content-Type: application/json" \
+            -d '{"message": "Increment counter", "content": "'"$(echo -n $new_counter | base64)"'", "sha": "'"$(curl -sSL https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json | jq -r '.sha')"'" }' \
+            https://api.github.com/repos/petraskov/Veido-Fondas-GPM-instrukcija/contents/counter.json
