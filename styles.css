@@ -62,7 +62,7 @@ p {
     margin-right: 10px;
 }
 .mr-20px {
-    margin-right: 20px!important;
+    margin-left: 20px!important;
     
 }
 .btn.green-button {
@@ -72,13 +72,13 @@ p {
 }
 
 .btn {
-    min-width: 180px;
-    max-width: 300px;
+    min-width: 90px; /* Reduce min-width by 50% */
+    max-width: 150px; /* Reduce max-width by 50% */
     white-space: nowrap;
     overflow: hidden;
     font-weight: 700;
-    border: 2px solid transparent;
-    margin-top: 10px;
-    min-height: 42px;
-    border-radius: 3px;
+    border: 1px solid transparent; /* Reduce border thickness by 50% */
+    margin-top: 5px; /* Reduce margin-top by 50% */
+    min-height: 21px; /* Reduce min-height by 50% */
+    border-radius: 2px; /* Reduce border-radius by 50% */
 }
