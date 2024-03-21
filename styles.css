@@ -65,8 +65,8 @@ p {
 }
 .btn.green-button {
     color: rgb(255, 255, 255);
-    background-color rgb(3, 125, 64);
-    border-bottom-color rgb(3, 125, 64);
+    background-color: rgb(3, 125, 64);
+    border-bottom-color: rgb(3, 125, 64);
 }
 
 .btn {
