@@ -82,3 +82,26 @@ p {
     padding:5px;/* Reduce min-height by 50% */
     border-radius: 2px; /* Reduce border-radius by 50% */
 }
+#counter {
+  font-size: 24px; /* Set font size */
+  font-weight: bold; /* Set font weight to bold */
+  padding: 10px; /* Add padding around the counter */
+  background-color: #f0f0f0; /* Set background color */
+  color: #333; /* Set text color */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+#did-it-button {
+  padding: 10px 20px; /* Add padding around the button text */
+  background-color: #4CAF50; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#did-it-button:hover {
+  background-color: #45a049; /* Darken background color on hover */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
