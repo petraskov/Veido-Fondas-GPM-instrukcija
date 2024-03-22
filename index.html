@@ -48,9 +48,28 @@
                <!-- <button id="did-it-button">I did it</button>
                 <span id="counter">0</span> -->
             </div>
-            <!-- Add more instruction steps and images as needed 
+          
         </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <iframe id="myIframe"></iframe>
+
+<script type="text/javascript" src="script.js">
+  var mainUrl = "https://script.google.com/macros/s/AKfycbwYAuI4sLL_YW_pBAl58LHQ50i_xu2IzdO5JHnJYooMZ2xF__lsxUEcV5U5KlI_qkM2/exec"; // the-page-that-you-want-to-embed
+  var urlParams = new URLSearchParams(window.location.search);
+  urlParams = urlParams.toString();
+  var ref = document.URL;
+  var clang = 'clang=' + document.location.pathname.split('/')[1];
+  var iframeUrl = mainUrl + '?&' + urlParams;
+  document.getElementsByTagName("iframe")[0].src = iframeUrl + "" ;
+  window.setInterval("reloadIFrame();", 120000);
+function reloadIFrame() {
+try {
+ document.getElementById('myIframe').contentWindow.location.reload();
+}catch(e){
+ document.getElementById('myIframe').src = document.getElementById('myIframe').src;
+ console.warn(e);
+}
+}
+ </script>
 </body>
 </html>
